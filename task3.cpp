@@ -1,6 +1,14 @@
 #include <iostream>
 using namespace std;
 
+void display(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+        cout << arr[i] << " ";
+
+    cout << endl;
+}
+
 void selectionSort(int arr[], int size)
 {
     for (int i = 0; i < size - 1; i++)
@@ -21,22 +29,15 @@ void selectionSort(int arr[], int size)
 
 int main()
 {
-    int arr[6];
+    int marks[6] = {78, 45, 92, 60, 85, 33};
 
-    cout << "Enter 6 numbers: ";
+    cout << "Before: ";
+    display(marks, 6);
 
-    for (int i = 0; i < 6; i++)
-        cin >> arr[i];
+    selectionSort(marks, 6);
 
-    selectionSort(arr, 6);
-
-    cout << "Sorted: ";
-
-    for (int i = 0; i < 6; i++)
-        cout << arr[i] << " ";
-
-    cout << "\nSmallest: " << arr[0];
-    cout << "\nLargest: " << arr[5];
+    cout << "After: ";
+    display(marks, 6);
 
     return 0;
 }
