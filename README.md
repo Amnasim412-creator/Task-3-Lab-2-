@@ -1,2 +1,2 @@
 # Task-3-Lab-2-
-Apply Selection Sort on an Array.
+Sort an array in ascending order.
